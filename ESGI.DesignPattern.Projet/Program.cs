@@ -6,7 +6,7 @@ namespace ESGI.DesignPattern.Projet
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello Design Pattern en C!");
         }
     }
 }

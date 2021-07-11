@@ -5,11 +5,12 @@ namespace ESGI.DesignPattern.Projet
     public class Order
     {
         private readonly int id;
-        private List<Product> products;
+        private List<Product> _products;
+        public IReadOnlyCollection<Product> Products => _products.AsReadOnly();
 
         public Order(int id)
         {
-            this.products = new List<Product>();
+            this._products = new List<Product>();
             this.id = id;
         }
 
@@ -20,17 +21,7 @@ namespace ESGI.DesignPattern.Projet
 
         public void Add(Product product)
         {
-            this.products.Add(product);
-        }
-
-        public int ProductCount()
-        {
-            return this.products.Count;
-        }
-
-        public Product Product(int insertionIndex)
-        {
-            return this.products[insertionIndex];
+            this._products.Add(product);
         }
     }
 }
